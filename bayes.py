@@ -1,9 +1,9 @@
-def loadDataset():
+def loadDataSet():
     postingList = [['my','dog','has','flea','problem','help','please'],
                    ['maybe','not','take','him','to','dog','park','stupid'],
-                   ['my','dalmation','is','so','cute','I','love','him']
+                   ['my','dalmation','is','so','cute','I','love','him'],
                    ['stop','posting','stupid','worthless','garbage'],
-                   ['my','licks','ate','my','steak','how','to','stop','him']
+                   ['my','licks','ate','my','steak','how','to','stop','him'],
                    ['quit','buying','worthless','dog','food','stupid']]
     classVec = [0,1,0,1,0,1]
     return postingList,classVec
@@ -15,7 +15,7 @@ def createVocabList(dataSet):
     return list(vocabSet)
 
 def setOfWords2Vec(vocabList , inputSet):
-    returnVec = [0]*len(vocalbList)
+    returnVec = [0]*len(vocabList)
     for word in inputSet:
         if word in vocabList:
             returnVec[vocabList.index(word)] = 1
